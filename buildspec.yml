@@ -7,7 +7,10 @@ phases:
       - yarn install
   build:
     commands:
-      - yarn build && aws s3 sync --delete public "s3://www.xiaoyongxu.com""
+      - yarn build && aws s3 sync --delete public "s3://www.xiaoyongxu.com/"
+  post_build:
+    commands:
+      - aws cloudfront create-invalidation --distribution-id E30HAI75WXHN73 --paths *
 cache:
   paths:
       - node_modules/**/*
