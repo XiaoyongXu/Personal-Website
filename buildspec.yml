@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm i -g yarn
+      - yarn install
+  build:
+    commands:
+      - yarn build && aws s3 sync --delete public "s3://www.xiaoyongxu.com""
+cache:
+  paths:
+      - node_modules/**/*
+      - public/**/*
+      - /usr/local/lib/node_modules/**/*
