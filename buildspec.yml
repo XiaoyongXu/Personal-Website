@@ -11,7 +11,7 @@ phases:
       - echo Deploying website
   build:
     commands:
-      - yarn build && aws s3 sync --delete build "s3://staging.bidtracker.com"
+      - yarn build && aws s3 sync --delete build "s3://xiaoyongxu.com"
 cache:
   paths:
       - node_modules/**/*
