@@ -1,18 +1,12 @@
-version: 0.2
-
-phases:
-  install:
-    runtime-versions:
-      nodejs: 10
-    commands:
-      - npm i -g yarn
-      - yarn install
-      - echo Deploying website
-  build:
-    commands:
-      - yarn build && aws s3 sync --delete build "s3://xiaoyongxu.com"
-cache:
-  paths:
-      - node_modules/**/*
-      - public/**/*
-      - /u
+version: 1.0
+env:
+  variables:
+      key: value
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm i
+    build:
+      commands:
+        - npm run build
