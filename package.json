@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@rehooks/window-scroll-position": "^1.0.1",
     "bootstrap": "^4.3.1",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
@@ -18,10 +20,27 @@
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
+    "globals": {
+      "window": true,
+      "localStorage": true,
+      "fetch": true
+    },
     "rules": {
       "semi": [
         2,
         "never"
+      ],
+      "react/jsx-filename-extension": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/forbid-prop-types": [
+        0,
+        {
+          "forbid": [
+            0
+          ],
+          "checkContextTypes": 0,
+          "checkChildContextTypes": 0
+        }
       ]
     }
   },
