@@ -1,0 +1,30 @@
+name: Manual S3 Bucket Cleanup
+
+# Allows you to run this workflow manually from the Actions tab
+on:
+  workflow_dispatch:
+    inputs:
+      bucket_name:
+        description: 'Bucket to empty'
+        required: true
+        default: 'xiaoyongxu.com'
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    environment: Production # Uses the same environment secrets
+    
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION || 'us-west-2' }} # Use the correct region
+
+      - name: Empty S3 Bucket
+        run: |
+          echo "Attempting to recursively delete all contents in s3://${{ github.event.inputs.bucket_name }}"
+          # THIS IS THE COMMAND THAT CLEANS THE BUCKET
+          aws s3 rm s3://${{ github.event.inputs.bucket_name }} --recursive
+          echo "Bucket cleanup process started/complete."

@@ -43,7 +43,7 @@ jobs:
           S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         run: |
           echo "Uploading to s3://$S3_BUCKET"
-          aws s3 sync dist/ s3://$S3_BUCKET --delete
+          aws s3 sync dist/ s3://$S3_BUCKET --delete --exclude '20*/*'
 
       - name: Create CloudFront invalidation
         env:
