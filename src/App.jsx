@@ -1,37 +1,19 @@
-import React from 'react'
-import './App.css'
-import Wedding from './styles/images/wedding.jpg'
-import Wedding2 from './styles/images/wedding.png'
-import TopNav from './TopNav'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { }
-    this.myRef = React.createRef()
-  }
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import './index.css'
 
-  componentDidMount() {
-  }
-
-  handleScrollToElement = () => {
-    window.scrollTo({ top: this.myRef.current.offsetTop, behavior: 'smooth' })
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <TopNav handleScrollToElement={this.handleScrollToElement} />
-        <div>
-          <img src={Wedding2} alt="vancouver" style={{ display: 'flex', flex: 1, width: '100vw' }} />
-        </div>
-        <div>
-          <img ref={this.myRef} src={Wedding} alt="vancouver" style={{ display: 'flex', flex: 1, width: '100vw' }} />
-        </div>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      <main className="flex-1">
+        <Home />
+      </main>
+      <Footer />
+    </div>
+  )
 }
 
 export default App
