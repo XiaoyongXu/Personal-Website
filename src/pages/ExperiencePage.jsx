@@ -40,12 +40,13 @@ const items = [
 
 const ExperiencePage = () => {
   return (
-    <section id="experience" className="section">
-      <div className="container">
-        <h2 className="text-2xl font-semibold mb-6">Experience</h2>
-        <ExperienceTimeline items={items} />
+    <div className="container">
+      <div className="mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-left mb-4">Experience</h2>
+        <div className="h-1 w-20 bg-primary rounded-full"></div>
       </div>
-    </section>
+      <ExperienceTimeline items={items} />
+    </div>
   )
 }
 

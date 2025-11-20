@@ -3,7 +3,12 @@
     "title": "Inventory Service (\"Inventony\")",
     "summary": "Rebuilt an independent Kafka-driven inventory microservice that writes directly to CommerceTools, producing a single source of truth.",
     "details": "Built a dedicated inventory service consuming real-time Kafka messages and updating CommerceTools directly. Replaced a brittle chain of Cloud Functions and MongoDB-based syncs. Outcome: zero inventory mismatches during peak events (e.g., Black Friday).",
-    "stack": ["Kafka", "Node.js", "CommerceTools", "MongoDB"],
+    "stack": [
+      "Kafka",
+      "Node.js",
+      "CommerceTools",
+      "MongoDB"
+    ],
     "github": "",
     "demo": ""
   },
@@ -11,7 +16,11 @@
     "title": "Order Service / Event Sequencer",
     "summary": "Created a Kafka consumer middleware to sequence order events before applying updates to CommerceTools.",
     "details": "Built a middleware Kafka consumer that orders events and applies updates one-at-a-time to avoid concurrent Cloud Function conflicts. This removed Narvar email mismatches and reduced retry-related processing conflicts.",
-    "stack": ["Kafka", "Node.js", "CommerceTools"],
+    "stack": [
+      "Kafka",
+      "Node.js",
+      "CommerceTools"
+    ],
     "github": "",
     "demo": ""
   },
@@ -19,7 +28,11 @@
     "title": "Headless Checkout (Bold Commerce)",
     "summary": "Integrated Bold Commerce headless checkout (beta) with modular adapters and fallbacks for a mobile-first checkout experience.",
     "details": "Integrated Bold Commerce's beta headless checkout in production: worked with Bold engineering, implemented robust error handling, fallback logic, and cross-team testing. Launched with zero downtime and measurable improvements in page speed and cart conversion.",
-    "stack": ["Bold Commerce", "JavaScript", "APIs"],
+    "stack": [
+      "Bold Commerce",
+      "JavaScript",
+      "APIs"
+    ],
     "github": "",
     "demo": ""
   },
@@ -27,7 +40,12 @@
     "title": "GCP Migration & Platform Modernization",
     "summary": "Led migration from IBM Cloud to GCP, migrating Cloud Functions and containerized services to GKE and introducing CI/CD.",
     "details": "Rewrote legacy IBM Cloud Functions for GCP Cloud Functions, migrated services to GKE, set up GitHub Actions + Cloud Build, and added monitoring/alerts in GCP. Resulted in ~50% fewer deployment incidents and faster rollbacks.",
-    "stack": ["GCP", "GKE", "Cloud Functions", "GitHub Actions"],
+    "stack": [
+      "GCP",
+      "GKE",
+      "Cloud Functions",
+      "GitHub Actions"
+    ],
     "github": "",
     "demo": ""
   },
@@ -35,7 +53,11 @@
     "title": "Performance & Reliability Fixes",
     "summary": "Short-term caching and MongoDB query refactors to reduce DB load and eliminate Kafka offset lag.",
     "details": "Implemented server-side caching for styles/brands endpoints to mitigate repetitive FE calls during peak traffic; refactored MongoDB queries (group queries & grouped updates) to eliminate Promise.all per-style queries that caused Kafka offset lag and Cloud Function timeouts.",
-    "stack": ["Node.js", "MongoDB", "Redis"],
+    "stack": [
+      "Node.js",
+      "MongoDB",
+      "Redis"
+    ],
     "github": "",
     "demo": ""
   },
@@ -43,7 +65,11 @@
     "title": "Shopfinalcut Launch",
     "summary": "Launched a new outlet store reusing core services with feature flags, shipping, and subtotal/discount adjustments.",
     "details": "Added feature flags across data models and services to support a new outlet store; updated checkout integration for same-day shipping and subtotal/discount logic; launched shopfinalcut successfully using the existing backend platform.",
-    "stack": ["Node.js", "CommerceTools", "Feature Flags"],
+    "stack": [
+      "Node.js",
+      "CommerceTools",
+      "Feature Flags"
+    ],
     "github": "",
     "demo": ""
   },
@@ -51,7 +77,11 @@
     "title": "Jesta → Kafka Reliability Fix",
     "summary": "Prevented lost/overwritten messages by adjusting Kafka connect query timing and adding a daily reconciliation job.",
     "details": "Extended query intervals and added a secondary daily backfill to ensure long-running Jesta queries don't drop messages. Reduced race conditions and ensured reliable data synchronization.",
-    "stack": ["Kafka", "Oracle", "Kafka Connect"],
+    "stack": [
+      "Kafka",
+      "Oracle",
+      "Kafka Connect"
+    ],
     "github": "",
     "demo": ""
   },
@@ -59,7 +89,11 @@
     "title": "LoginRadius CRM ID Merge",
     "summary": "Linked duplicate customer profiles by propagating LoginRadius CRM IDs to Commercetools and merging carts.",
     "details": "Integrated LoginRadius CRM ID into the customer flow to detect and merge duplicate profiles created by guest checkout followed by social login, restoring correct customer state and cart continuity.",
-    "stack": ["Commercetools", "LoginRadius", "Node.js"],
+    "stack": [
+      "Commercetools",
+      "LoginRadius",
+      "Node.js"
+    ],
     "github": "",
     "demo": ""
   },
@@ -67,7 +101,12 @@
     "title": "FintelConnect — Affiliate Platform",
     "summary": "Frontend lead + full-stack contributor for a real-time affiliate marketing platform adopted by banks and fintechs.",
     "details": "Led frontend development of real-time dashboards and performance optimizations; contributed to backend architecture and AWS infra (Lambda, EC2, MongoDB, Auth0). Platform won two FinXTech Awards including Best Solution for Revenue Growth.",
-    "stack": ["React", "AWS", "MongoDB", "Auth0"],
+    "stack": [
+      "React",
+      "AWS",
+      "MongoDB",
+      "Auth0"
+    ],
     "github": "",
     "demo": ""
   },
@@ -75,7 +114,44 @@
     "title": "Bidfy — MVP Delivery",
     "summary": "Delivered an MVP (RSS feed + AWS Lambda + DynamoDB) quickly to validate market response in 3 sprints.",
     "details": "Built a cost-efficient MVP using serverless components (Lambda, DynamoDB) and an RSS ingestion pipeline to validate product-market fit in a short timeframe.",
-    "stack": ["AWS Lambda", "DynamoDB", "RSS"],
+    "stack": [
+      "AWS Lambda",
+      "DynamoDB",
+      "RSS"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  {
+    "title": "Eventer (Full-Stack)",
+    "summary": "Group project for an outdoor events management system using Google APIs and Open-Weather API.",
+    "details": "Responsible for using Google APIs (OAuth, Map and Location) and Open-Weather API on the Activities Page and Admin Page, and image files transformation by Multer.",
+    "stack": [
+      "React",
+      "NodeJS",
+      "JavaScript"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  {
+    "title": "Jungle (E-commerce)",
+    "summary": "Implemented core e-commerce features including Sold Out badges, Admin Categories, and User Auth.",
+    "details": "Implemented features of \"Product Sold Out - Badge\", \"Admin Categories\", \"User Authentication\", \"Order Details\", \"E-mail Receipt\" and \"Product Ratings\". Fixed bugs including \"Missing Admin Security\" and \"Checking out with Empty Cart\".",
+    "stack": [
+      "Ruby on Rails"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  {
+    "title": "Charity (IOS Mobile App)",
+    "summary": "Collaborated on a mental health mobile app offering anxiety treatment plans and mini-games.",
+    "details": "Collaborated on Clarity, a mental health mobile app that offers personalized anxiety treatment plans, mini-games, data tracking, and a community message board. Designed and implemented the UFO game, an interactive mini-game aimed at reducing anxiety through engaging, fast-paced gameplay.",
+    "stack": [
+      "Xcode",
+      "Swift"
+    ],
     "github": "",
     "demo": ""
   }

@@ -2,108 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Theme CSS variables. Default to Clean Minimal White (light) */
+/* Theme CSS variables. */
 :root {
-  --color-primary: #2563EB; /* Blue 600 */
-  --color-accent: #0EA5E9;  /* Sky 500 */
-  --color-bg: #FFFFFF;      /* Background */
-  --color-surface: #F8FAFC; /* Surface */
-  --color-text: #0F172A;    /* Slate 900 */
-  --color-muted: #64748B;   /* slate-500-ish */
+    --color-primary: 59 130 246;
+    /* #3b82f6 */
+    --color-primary-foreground: 255 255 255;
+    --color-bg: 255 255 255;
+    --color-surface: 248 250 252;
+    /* #f8fafc */
+    --color-surface-foreground: 15 23 42;
+    --color-text: 15 23 42;
+    /* #0f172a */
+    --color-muted: 100 116 139;
+    /* #64748b */
+    --color-border: 226 232 240;
+    /* #e2e8f0 */
 }
 
 /* Midnight Indigo theme (dark) */
-.theme-midnight, html.theme-midnight {
-  --color-primary: #6366F1; /* Indigo 500 */
-  --color-accent: #A78BFA;  /* Purple 400 */
-  --color-bg: #0F172A;      /* Slate 900 */
-  --color-surface: #1E293B; /* Slate 800 */
-  --color-text: #F1F5F9;    /* Slate 100 */
-  --color-muted: #94A3B8;   /* slate-400-ish */
+.theme-midnight,
+html.theme-midnight {
+    --color-primary: 99 102 241;
+    /* #6366f1 */
+    --color-primary-foreground: 255 255 255;
+    --color-bg: 2 6 23;
+    /* #020617 */
+    --color-surface: 15 23 42;
+    /* #0f172a */
+    --color-surface-foreground: 248 250 252;
+    --color-text: 248 250 252;
+    /* #f8fafc */
+    --color-muted: 148 163 184;
+    /* #94a3b8 */
+    --color-border: 30 41 59;
+    /* #1e293b */
 }
 
 /* Clean Minimal White theme (light) */
-.theme-minimal, html.theme-minimal {
-  --color-primary: #2563EB; /* Blue 600 */
-  --color-accent: #0EA5E9;  /* Sky 500 */
-  --color-bg: #FFFFFF;
-  --color-surface: #F8FAFC;
-  --color-text: #0F172A;
-  --color-muted: #64748B;
+.theme-minimal,
+html.theme-minimal {
+    --color-primary: 15 23 42;
+    /* #0f172a */
+    --color-primary-foreground: 255 255 255;
+    --color-bg: 255 255 255;
+    --color-surface: 248 250 252;
+    --color-surface-foreground: 15 23 42;
+    --color-text: 15 23 42;
+    --color-muted: 100 116 139;
+    --color-border: 226 232 240;
 }
 
-html, body, #root {
-  height: 100%;
+html,
+body,
+#root {
+    height: 100%;
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-text));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 .container {
-  @apply max-w-5xl mx-auto px-4;
+    @apply max-w-5xl mx-auto px-4;
 }
 
 /* simple utility for content spacing */
-.section { padding: 3rem 0 }
+.section {
+    padding: 3rem 0
+}
 
 /* If user prefers system theme, map it to our theme classes */
 @media (prefers-color-scheme: dark) {
-  :root:not(.theme-midnight):not(.theme-minimal) {
-    /* apply midnight if no explicit selection */
-    --color-primary: #6366F1;
-    --color-accent: #A78BFA;
-    --color-bg: #0F172A;
-    --color-surface: #1E293B;
-    --color-text: #F1F5F9;
-    --color-muted: #94A3B8;
-  }
+    :root:not(.theme-midnight):not(.theme-minimal) {
+        /* apply midnight if no explicit selection */
+        --color-primary: 99 102 241;
+        --color-bg: 2 6 23;
+        --color-surface: 15 23 42;
+        --color-text: 248 250 252;
+        --color-muted: 148 163 184;
+        --color-border: 30 41 59;
+    }
 }
 
-/* Utility classes that reference our tokens (use these instead of static slate classes when you want theme-aware color) */
-.bg-theme { background-color: var(--color-bg) }
-.bg-surface { background-color: var(--color-surface) }
-.text-theme { color: var(--color-text) }
-.text-muted { color: var(--color-muted) }
-.btn-primary { background-color: var(--color-primary); color: var(--color-text) }
-
-.border-surface { border-color: rgba(15,23,42,0.08) }
-
-/* Light theme (Clean Minimal) overrides for common Tailwind utility classes
-   Many components were built with dark-mode utility classes (text-slate-300, bg-slate-800, etc.).
-   Remap those to readable colors when the light theme is active to improve contrast.
-*/
-.theme-minimal .text-gray-700,
-.theme-minimal .text-slate-700,
-.theme-minimal .text-slate-600,
-.theme-minimal .text-slate-500 {
-  color: var(--color-text) !important;
-}
-.theme-minimal .text-slate-400,
-.theme-minimal .text-slate-300,
-.theme-minimal .text-slate-200,
-.theme-minimal .text-gray-600 {
-  color: var(--color-muted) !important;
+/* Utility classes that reference our tokens */
+.bg-theme {
+    background-color: rgb(var(--color-bg))
 }
 
-/* Replace dark backgrounds used for cards/blocks with the light surface color */
-.theme-minimal .bg-slate-800\/30,
-.theme-minimal .bg-slate-800\/60,
-.theme-minimal .bg-slate-800,
-.theme-minimal .bg-slate-900 {
-  background-color: var(--color-surface) !important;
-  color: var(--color-text) !important;
+.bg-surface {
+    background-color: rgb(var(--color-surface))
 }
 
-.theme-minimal .border-slate-700 {
-  border-color: rgba(15,23,42,0.08) !important;
+.text-theme {
+    color: rgb(var(--color-text))
 }
 
-.theme-minimal .shadow-md { box-shadow: 0 6px 18px rgba(2,6,23,0.04) !important; }
+.text-muted {
+    color: rgb(var(--color-muted))
+}
 
+.btn-primary {
+    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-primary-foreground))
+}
 
-
+.glass-panel {
+    @apply bg-surface/80 backdrop-blur-md border border-border shadow-sm;
+}

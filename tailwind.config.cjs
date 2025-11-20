@@ -8,14 +8,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Color tokens mapped to CSS variables so themes can swap at runtime
-        primary: 'var(--color-primary)',
-        accent: 'var(--color-accent)',
-        bg: 'var(--color-bg)',
-        surface: 'var(--color-surface)',
-        themeText: 'var(--color-text)',
-        muted: 'var(--color-muted)'
-      }
+        primary: {
+          DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+          foreground: 'rgb(var(--color-primary-foreground) / <alpha-value>)',
+        },
+        bg: 'rgb(var(--color-bg) / <alpha-value>)',
+        surface: {
+          DEFAULT: 'rgb(var(--color-surface) / <alpha-value>)',
+          foreground: 'rgb(var(--color-surface-foreground) / <alpha-value>)',
+        },
+        text: 'rgb(var(--color-text) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
     }
   },
   plugins: []
