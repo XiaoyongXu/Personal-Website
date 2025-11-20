@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-
-import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 const ProjectCard = ({ project }) => {
