@@ -1,28 +1,22 @@
 [
   {
-    "title": "Inventory Service (\"Inventony\")",
-    "summary": "Rebuilt an independent Kafka-driven inventory microservice that writes directly to CommerceTools, producing a single source of truth.",
-    "details": "Built a dedicated inventory service consuming real-time Kafka messages and updating CommerceTools directly. Replaced a brittle chain of Cloud Functions and MongoDB-based syncs. Outcome: zero inventory mismatches during peak events (e.g., Black Friday).",
+    "title": "Harry Rosen (E-Commerce Platform)",
+    "summary": "Played a core role as a senior backend engineer, driving architectural decisions, service migrations, and reliability improvements in a production-critical environment.",
+    "details": "Led full infrastructure migration from IBM Cloud to GCP (GKE, Cloud Functions). Architected blue-green CI/CD pipelines with GitHub Actions, reducing incidents by 50%. Tuned MongoDB sharding for 25% latency reduction. Migrated retry systems to Kafka and designed real-time event syncing for CommerceTools/Algolia. Rebuilt loyalty system (TalonOne) and integrated headless checkout (Bold Commerce).",
     "stack": [
+      "GCP",
+      "Kubernetes",
       "Kafka",
+      "MongoDB",
       "Node.js",
+      "TypeScript",
+      "Terraform",
+      "Amplience",
       "CommerceTools",
-      "MongoDB"
+      "Algolia"
     ],
     "github": "",
-    "demo": ""
-  },
-  {
-    "title": "Order Service / Event Sequencer",
-    "summary": "Created a Kafka consumer middleware to sequence order events before applying updates to CommerceTools.",
-    "details": "Built a middleware Kafka consumer that orders events and applies updates one-at-a-time to avoid concurrent Cloud Function conflicts. This removed Narvar email mismatches and reduced retry-related processing conflicts.",
-    "stack": [
-      "Kafka",
-      "Node.js",
-      "CommerceTools"
-    ],
-    "github": "",
-    "demo": ""
+    "demo": "https://www.harryrosen.com/en"
   },
   {
     "title": "Headless Checkout (Bold Commerce)",
@@ -31,38 +25,16 @@
     "stack": [
       "Bold Commerce",
       "JavaScript",
-      "APIs"
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Chakra UI"
     ],
     "github": "",
-    "demo": ""
+    "demo": "https://checkout.harryrosen.com"
   },
   {
-    "title": "GCP Migration & Platform Modernization",
-    "summary": "Led migration from IBM Cloud to GCP, migrating Cloud Functions and containerized services to GKE and introducing CI/CD.",
-    "details": "Rewrote legacy IBM Cloud Functions for GCP Cloud Functions, migrated services to GKE, set up GitHub Actions + Cloud Build, and added monitoring/alerts in GCP. Resulted in ~50% fewer deployment incidents and faster rollbacks.",
-    "stack": [
-      "GCP",
-      "GKE",
-      "Cloud Functions",
-      "GitHub Actions"
-    ],
-    "github": "",
-    "demo": ""
-  },
-  {
-    "title": "Performance & Reliability Fixes",
-    "summary": "Short-term caching and MongoDB query refactors to reduce DB load and eliminate Kafka offset lag.",
-    "details": "Implemented server-side caching for styles/brands endpoints to mitigate repetitive FE calls during peak traffic; refactored MongoDB queries (group queries & grouped updates) to eliminate Promise.all per-style queries that caused Kafka offset lag and Cloud Function timeouts.",
-    "stack": [
-      "Node.js",
-      "MongoDB",
-      "Redis"
-    ],
-    "github": "",
-    "demo": ""
-  },
-  {
-    "title": "Shopfinalcut Launch",
+    "title": "Shopfinalcut",
     "summary": "Launched a new outlet store reusing core services with feature flags, shipping, and subtotal/discount adjustments.",
     "details": "Added feature flags across data models and services to support a new outlet store; updated checkout integration for same-day shipping and subtotal/discount logic; launched shopfinalcut successfully using the existing backend platform.",
     "stack": [
@@ -71,31 +43,7 @@
       "Feature Flags"
     ],
     "github": "",
-    "demo": ""
-  },
-  {
-    "title": "Jesta → Kafka Reliability Fix",
-    "summary": "Prevented lost/overwritten messages by adjusting Kafka connect query timing and adding a daily reconciliation job.",
-    "details": "Extended query intervals and added a secondary daily backfill to ensure long-running Jesta queries don't drop messages. Reduced race conditions and ensured reliable data synchronization.",
-    "stack": [
-      "Kafka",
-      "Oracle",
-      "Kafka Connect"
-    ],
-    "github": "",
-    "demo": ""
-  },
-  {
-    "title": "LoginRadius CRM ID Merge",
-    "summary": "Linked duplicate customer profiles by propagating LoginRadius CRM IDs to Commercetools and merging carts.",
-    "details": "Integrated LoginRadius CRM ID into the customer flow to detect and merge duplicate profiles created by guest checkout followed by social login, restoring correct customer state and cart continuity.",
-    "stack": [
-      "Commercetools",
-      "LoginRadius",
-      "Node.js"
-    ],
-    "github": "",
-    "demo": ""
+    "demo": "https://www.shopfinalcut.com/en"
   },
   {
     "title": "FintelConnect — Affiliate Platform",
@@ -105,7 +53,76 @@
       "React",
       "AWS",
       "MongoDB",
-      "Auth0"
+      "Auth0",
+      "GraphQL",
+      "Node.js",
+      "TypeScript"
+    ],
+    "github": "",
+    "demo": "https://app.fintelconnect.com"
+  },
+  {
+    "title": "Eventer (Full-Stack)",
+    "summary": "Group project for an outdoor events management system using Google APIs and Open-Weather API.",
+    "details": "Responsible for using Google APIs (OAuth, Map and Location) and Open-Weather API on the Activities Page and Admin Page, and image files transformation by Multer.",
+    "stack": [
+      "React",
+      "NodeJS",
+      "JavaScript",
+      "Google Maps API",
+      "OpenWeather API"
+    ],
+    "github": "https://github.com/XiaoyongXu/Eventer",
+    "demo": ""
+  },
+  {
+    "title": "Jungle (E-commerce)",
+    "summary": "Implemented core e-commerce features including Sold Out badges, Admin Categories, and User Auth.",
+    "details": "Implemented features of \"Product Sold Out - Badge\", \"Admin Categories\", \"User Authentication\", \"Order Details\", \"E-mail Receipt\" and \"Product Ratings\". Fixed bugs including \"Missing Admin Security\" and \"Checking out with Empty Cart\".",
+    "stack": [
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Stripe"
+    ],
+    "github": "https://github.com/XiaoyongXu/jungle-rails",
+    "demo": ""
+  },
+  {
+    "title": "ChattyApp",
+    "summary": "A multi-user real-time communication app built with React and WebSockets.",
+    "details": "Real-time messaging application featuring live user online status, message notifications, and instant updates using WebSockets. Built with a React frontend and a Node.js WebSocket server.",
+    "stack": [
+      "React",
+      "WebSockets",
+      "Node.js",
+      "Webpack"
+    ],
+    "github": "https://github.com/XiaoyongXu/ChattyApp",
+    "demo": ""
+  },
+  {
+    "title": "Wordle Game",
+    "summary": "A modern, full-stack implementation of the popular word-guessing game with real-time multiplayer and 'cheating' modes.",
+    "details": "Built a client-server architecture with React and Node.js/Express. Features include a 'Host Cheating' mode (Absurdle style), real-time multiplayer using WebSockets (Head-to-Head, Race, Hybrid modes), player statistics tracking in localStorage, and an interactive on-screen keyboard.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "WebSockets",
+      "Vite",
+      "Turbo"
+    ],
+    "github": "https://github.com/XiaoyongXu/wordle-game",
+    "demo": ""
+  },
+  {
+    "title": "Charity (IOS Mobile App)",
+    "summary": "Collaborated on a mental health mobile app offering anxiety treatment plans and mini-games.",
+    "details": "Collaborated on Clarity, a mental health mobile app that offers personalized anxiety treatment plans, mini-games, data tracking, and a community message board. Designed and implemented the UFO game, an interactive mini-game aimed at reducing anxiety through engaging, fast-paced gameplay.",
+    "stack": [
+      "Xcode",
+      "Swift"
     ],
     "github": "",
     "demo": ""
@@ -118,39 +135,6 @@
       "AWS Lambda",
       "DynamoDB",
       "RSS"
-    ],
-    "github": "",
-    "demo": ""
-  },
-  {
-    "title": "Eventer (Full-Stack)",
-    "summary": "Group project for an outdoor events management system using Google APIs and Open-Weather API.",
-    "details": "Responsible for using Google APIs (OAuth, Map and Location) and Open-Weather API on the Activities Page and Admin Page, and image files transformation by Multer.",
-    "stack": [
-      "React",
-      "NodeJS",
-      "JavaScript"
-    ],
-    "github": "",
-    "demo": ""
-  },
-  {
-    "title": "Jungle (E-commerce)",
-    "summary": "Implemented core e-commerce features including Sold Out badges, Admin Categories, and User Auth.",
-    "details": "Implemented features of \"Product Sold Out - Badge\", \"Admin Categories\", \"User Authentication\", \"Order Details\", \"E-mail Receipt\" and \"Product Ratings\". Fixed bugs including \"Missing Admin Security\" and \"Checking out with Empty Cart\".",
-    "stack": [
-      "Ruby on Rails"
-    ],
-    "github": "",
-    "demo": ""
-  },
-  {
-    "title": "Charity (IOS Mobile App)",
-    "summary": "Collaborated on a mental health mobile app offering anxiety treatment plans and mini-games.",
-    "details": "Collaborated on Clarity, a mental health mobile app that offers personalized anxiety treatment plans, mini-games, data tracking, and a community message board. Designed and implemented the UFO game, an interactive mini-game aimed at reducing anxiety through engaging, fast-paced gameplay.",
-    "stack": [
-      "Xcode",
-      "Swift"
     ],
     "github": "",
     "demo": ""

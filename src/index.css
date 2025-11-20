@@ -13,8 +13,8 @@
     --color-surface-foreground: 15 23 42;
     --color-text: 15 23 42;
     /* #0f172a */
-    --color-muted: 100 116 139;
-    /* #64748b */
+    --color-muted: 71 85 105;
+    /* #475569 (Slate 600) - Darker for readability */
     --color-border: 226 232 240;
     /* #e2e8f0 */
 }
@@ -22,9 +22,9 @@
 /* Midnight Indigo theme (dark) */
 .theme-midnight,
 html.theme-midnight {
-    --color-primary: 99 102 241;
-    /* #6366f1 */
-    --color-primary-foreground: 255 255 255;
+    --color-primary: 255 255 255;
+    /* #ffffff - White for dark mode */
+    --color-primary-foreground: 15 23 42;
     --color-bg: 2 6 23;
     /* #020617 */
     --color-surface: 15 23 42;
@@ -48,7 +48,8 @@ html.theme-minimal {
     --color-surface: 248 250 252;
     --color-surface-foreground: 15 23 42;
     --color-text: 15 23 42;
-    --color-muted: 100 116 139;
+    --color-muted: 71 85 105;
+    /* Slate 600 */
     --color-border: 226 232 240;
 }
 
@@ -79,7 +80,7 @@ body {
 @media (prefers-color-scheme: dark) {
     :root:not(.theme-midnight):not(.theme-minimal) {
         /* apply midnight if no explicit selection */
-        --color-primary: 99 102 241;
+        --color-primary: 255 255 255;
         --color-bg: 2 6 23;
         --color-surface: 15 23 42;
         --color-text: 248 250 252;
