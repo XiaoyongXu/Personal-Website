@@ -1,5 +1,23 @@
 [
   {
+    "title": "Uni Retail Platform (URP)",
+    "summary": "Lead architect for a high-scale logistics platform, driving the transition to a serverless 'Lambdalith' architecture with 28+ microservices for cross-border shipping operations.",
+    "details": "Architected a serverless microservices backend on AWS Lambda handling shipments, payments, and multi-carrier integrations. Integrated Borderline Genius API for real-time US duty and tariff calculations on HTS codes. Built Retool-based analytics dashboards and optimized pickup flows with serviceability filtering.",
+    "stack": [
+      "TypeScript",
+      "Node.js",
+      "AWS Lambda",
+      "Prisma",
+      "PostgreSQL",
+      "Retool",
+      "PostNL",
+      "Wizmo"
+    ],
+    "github": "",
+    "demo": "https://ship.uniuni.com/"
+  },
+  {
+
     "title": "Harry Rosen (E-Commerce Platform)",
     "summary": "Played a core role as a senior backend engineer, driving architectural decisions, service migrations, and reliability improvements in a production-critical environment.",
     "details": "Led full infrastructure migration from IBM Cloud to GCP (GKE, Cloud Functions). Architected blue-green CI/CD pipelines with GitHub Actions, reducing incidents by 50%. Tuned MongoDB sharding for 25% latency reduction. Migrated retry systems to Kafka and designed real-time event syncing for CommerceTools/Algolia. Rebuilt loyalty system (TalonOne) and integrated headless checkout (Bold Commerce).",
