@@ -1,19 +1,24 @@
-
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import './index.css'
+import { Layout } from "./components/layout/Layout";
+import { Hero } from "./components/sections/Hero";
+import { Projects } from "./components/sections/Projects";
+import { About } from "./components/sections/About";
+import { Experience } from "./components/sections/Experience";
+import { Contact } from "./components/sections/Contact";
+import { Background3D } from "./components/ui/Background3D";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
-      <main className="flex-1">
-        <Home />
-      </main>
-      <Footer />
-    </div>
-  )
+    <>
+      <Background3D />
+      <Layout>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </Layout>
+    </>
+  );
 }
 
-export default App
+export default App;

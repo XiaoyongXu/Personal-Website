@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Archivo', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
+      },
       colors: {
         primary: {
           DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
@@ -20,6 +24,11 @@ module.exports = {
         text: 'rgb(var(--color-text) / <alpha-value>)',
         muted: 'rgb(var(--color-muted) / <alpha-value>)',
         border: 'rgb(var(--color-border) / <alpha-value>)',
+        accent: {
+             DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+             foreground: 'rgb(var(--color-accent-foreground) / <alpha-value>)',
+        },
+        ring: 'rgb(var(--color-accent) / <alpha-value>)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
