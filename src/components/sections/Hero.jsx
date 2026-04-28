@@ -35,7 +35,7 @@ export const Hero = () => {
               {/* Image Clipper - Squircle/Organic Shape */}
               <div className="relative w-full h-full overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%] shadow-2xl border-4 border-surface/50 transition-all duration-500 group-hover:rounded-full group-hover:scale-105">
                  <img 
-                   src="/photo.jpg" 
+                   src="/photo.png" 
                    alt="Xiaoyong (Tony) Xu" 
                    className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700" 
                  />
@@ -44,29 +44,43 @@ export const Hero = () => {
               </div>
            </div>
         </motion.div>
+
+        {/* Role Tag */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          className="mb-6"
+        >
+          <span className="inline-block px-4 py-1.5 text-sm font-medium tracking-wide text-accent bg-accent/10 border border-accent/20 rounded-full">
+            Senior Software Engineer · Platform Engineer
+          </span>
+        </motion.div>
         
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-6xl md:text-8xl font-display font-bold mb-6 tracking-tight leading-none"
+          className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 tracking-tight leading-[1.05]"
         >
-          Building <br className="hidden md:block"/>
-          <span className="text-gradient-accent">exceptional</span>
-          <br className="hidden md:block"/> digital experiences.
+          Engineering platforms <br className="hidden md:block"/>
+          <span className="text-gradient-accent">that deliver at scale.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="text-lg md:text-2xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed font-light"
+          className="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed font-light"
         >
-          I'm a Full Stack Developer specializing in scalable architecture and intuitive UI. 
-          Currently transforming logistics at <span className="text-text font-medium relative inline-block">
-             Uni Express
+          I build and operate full-stack platform systems for high-volume logistics — serverless
+          microservices, Kubernetes workloads, cross-border shipping, payment orchestration,
+          and deployment infrastructure. Currently on the platform team at{" "}
+          <span className="text-text font-medium relative inline-block">
+             UniUni
              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent/50 rounded-full"></span>
-          </span>.
+          </span>
+          , owning systems that power shipping, payments, and integrations across Canada and the U.S.
         </motion.p>
 
         <motion.div
@@ -75,11 +89,14 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-5 justify-center w-full sm:w-auto"
         >
-          <Button variant="accent" className="h-14 px-10 text-lg rounded-full shadow-xl shadow-accent/20 hover:shadow-accent/40" onClick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}>
+          <Button variant="accent" className="h-14 px-10 text-lg rounded-full shadow-xl shadow-accent/20 hover:shadow-accent/40" onClick={() => document.getElementById("experience").scrollIntoView({ behavior: "smooth" })}>
+            View Experience
+          </Button>
+          <Button variant="outline" className="h-14 px-10 text-lg rounded-full backdrop-blur-md bg-surface/30 border-text/10" onClick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}>
             View Projects
           </Button>
           <Button variant="outline" className="h-14 px-10 text-lg rounded-full backdrop-blur-md bg-surface/30 border-text/10" onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}>
-            Contact Me
+            Contact
           </Button>
         </motion.div>
       </div>

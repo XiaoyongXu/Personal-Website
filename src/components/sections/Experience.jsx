@@ -38,14 +38,35 @@ export const Experience = () => {
                       </span>
                    </div>
                    
-                   <ul className="space-y-3">
-                      {item.bullets.map((bullet, i) => (
-                         <li key={i} className="text-muted leading-relaxed text-base flex gap-3">
-                            <span className="block w-1.5 h-1.5 mt-2 rounded-full bg-border flex-shrink-0" />
-                            <span>{bullet}</span>
-                         </li>
-                      ))}
-                   </ul>
+                   {/* Themed grouping for entries with themes */}
+                   {item.themes ? (
+                     <div className="space-y-6">
+                       {item.themes.map((theme, ti) => (
+                         <div key={ti}>
+                           <h4 className="text-sm font-semibold text-accent/80 uppercase tracking-wider mb-2">
+                             {theme.label}
+                           </h4>
+                           <ul className="space-y-2">
+                             {theme.bullets.map((bullet, bi) => (
+                               <li key={bi} className="text-muted leading-relaxed text-base flex gap-3">
+                                 <span className="block w-1.5 h-1.5 mt-2 rounded-full bg-border flex-shrink-0" />
+                                 <span>{bullet}</span>
+                               </li>
+                             ))}
+                           </ul>
+                         </div>
+                       ))}
+                     </div>
+                   ) : (
+                     <ul className="space-y-3">
+                        {item.bullets.map((bullet, i) => (
+                           <li key={i} className="text-muted leading-relaxed text-base flex gap-3">
+                              <span className="block w-1.5 h-1.5 mt-2 rounded-full bg-border flex-shrink-0" />
+                              <span>{bullet}</span>
+                           </li>
+                        ))}
+                     </ul>
+                   )}
                 </motion.div>
              ))}
         </div>

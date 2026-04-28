@@ -9,7 +9,7 @@ function About() {
         <div className="md:w-1/3">
           <img
             className="rounded-full w-48 h-48 lg:w-64 lg:h-64 mx-auto object-cover shadow-lg border-4 border-surface"
-            src="/photo.jpg"
+            src="/photo.png"
             alt="Xiaoyong (Tony) Xu"
           />
         </div>

@@ -3,26 +3,32 @@ import { Button } from "../ui/Button";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-24">
-      <div className="container-custom max-w-4xl">
+    <section id="contact" className="section-padding">
+      <div className="container-custom">
         <motion.div
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.5 }}
-           className="bg-surface border border-border rounded-3xl p-8 md:p-12 text-center"
+           className="mb-12"
         >
-           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Let's work together</h2>
-           <p className="text-muted text-lg mb-8 max-w-xl mx-auto">
-              I'm currently available for new projects and collaborations. 
-              If you have a project in mind or just want to chat, feel free to reach out.
+           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Let's Connect</h2>
+           <p className="text-muted text-lg max-w-2xl">
+              I'm open to Senior / Platform Engineer roles and technical leadership opportunities. 
+              If you're building something complex at scale, I'd like to hear about it.
            </p>
-           
-           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" className="h-14 px-8 text-lg" onClick={() => window.location.href = 'mailto:xxy1994212@gmail.com'}>
-                 Send me an email
-              </Button>
-           </div>
+        </motion.div>
+
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.5, delay: 0.1 }}
+           className="flex flex-col sm:flex-row gap-5"
+        >
+           <Button variant="accent" className="h-14 px-10 text-lg rounded-full shadow-xl shadow-accent/20 hover:shadow-accent/40" onClick={() => window.location.href = 'mailto:xxy1994212@gmail.com'}>
+              Send me an email
+           </Button>
         </motion.div>
       </div>
     </section>

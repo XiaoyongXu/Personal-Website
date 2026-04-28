@@ -17,6 +17,35 @@
     "demo": "https://ship.uniuni.com/"
   },
   {
+    "title": "UniUni.com — Corporate Site",
+    "summary": "Own deployment and release operations for UniUni's public-facing WordPress site, managing infrastructure, updates, and production reliability.",
+    "details": "Manage deployment pipelines, WordPress updates, and production environment for the uniuni.com corporate site. Responsible for release coordination, uptime, and operational continuity.",
+    "stack": [
+      "WordPress",
+      "PHP",
+      "Deployment",
+      "Infrastructure"
+    ],
+    "github": "",
+    "demo": "https://www.uniuni.com/"
+  },
+  {
+    "title": "Tropical Daydream — E-Commerce Store",
+    "summary": "Full-stack e-commerce plant store built from scratch using AI-augmented vibe coding. Serverless AWS SAM backend with React + Tailwind frontend, Stripe payments, and admin dashboard.",
+    "details": "End-to-end e-commerce platform: React/Tailwind storefront with product catalog, cart, and Stripe embedded checkout. Serverless API on AWS SAM (Lambda, DynamoDB, S3) with JWT auth, presigned image uploads, order management, and webhook-driven payment processing. Built entirely via AI-augmented workflows.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "AWS SAM",
+      "DynamoDB",
+      "S3",
+      "Stripe",
+      "Tailwind CSS"
+    ],
+    "github": "",
+    "demo": "https://tropicaldaydream.com"
+  },
+  {
 
     "title": "Harry Rosen (E-Commerce Platform)",
     "summary": "Played a core role as a senior backend engineer, driving architectural decisions, service migrations, and reliability improvements in a production-critical environment.",

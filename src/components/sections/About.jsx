@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "React", "Node.js", "TypeScript", "Next.js",
-  "PostgreSQL", "GraphQL", "Tailwind CSS", "Docker", "Kafka",
-  "MongoDB", "Redis", "CI/CD", "Serverless", "Microservices", "AWS", "GCP","Prisma"
+  "TypeScript", "Node.js", "AWS Lambda", "Prisma", "PostgreSQL",
+  "Kafka", "Docker", "Kubernetes", "GCP", "MongoDB",
+  "Redis", "CI/CD", "Serverless", "Zod", "React",
+  "Terraform", "GraphQL", "Claude Code", "Codex",
 ];
 
 export const About = () => {
@@ -23,10 +24,13 @@ export const About = () => {
                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">About Me</h2>
                <div className="space-y-4 text-muted text-lg leading-relaxed">
                   <p>
-                    I’m a full-stack engineer who thrives on building robust systems and making them scale. My work spans API design, backend performance tuning, cloud infrastructure, and creating smooth, responsive experiences on the front end.
+                    I'm a software and platform engineer who builds systems that move real things — packages, payments, carrier integrations — across borders and at scale. My work spans the full stack, from React frontends to serverless microservices to Kubernetes infrastructure. My focus is on making complex logistics systems reliable, observable, and safe to change.
                   </p>
                   <p>
-                    Currently, I lead architectural decisions at <span className="text-accent font-medium">Uni Express</span>, optimizing logistics for thousands of daily shipments. I love breaking down complex problems—whether it's reducing API latency or designing a pixel-perfect component system.
+                    At <span className="text-accent font-medium">UniUni</span>, I own the platform powering cross-border shipping between Canada and the U.S., including duty automation, webhook systems, analytics pipelines, and regional deployment operations. Before that, I built inventory orchestration and event-driven systems for high-traffic e-commerce at <span className="text-accent font-medium">Orium</span>.
+                  </p>
+                  <p>
+                    I use AI tools — Claude Code, Codex, Gemini — as practical engineering leverage for planning, debugging, and accelerating delivery. Not as a novelty, but as part of how I ship.
                   </p>
                </div>
             </motion.div>
@@ -40,19 +44,23 @@ export const About = () => {
                className="md:w-1/3 flex flex-col justify-center gap-6"
             >
                 <div className="p-6 bg-surface rounded-2xl border border-border/50 shadow-sm hover:border-accent/30 transition-colors">
-                     <div className="text-4xl font-bold text-accent mb-1">6+</div>
-                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Years Experience</div>
+                     <div className="text-4xl font-bold text-accent mb-1">7+</div>
+                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Years in Production Systems</div>
                  </div>
                  <div className="p-6 bg-surface rounded-2xl border border-border/50 shadow-sm hover:border-accent/30 transition-colors">
-                     <div className="text-4xl font-bold text-accent mb-1">50+</div>
-                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Projects Delivered</div>
+                     <div className="text-4xl font-bold text-accent mb-1">3</div>
+                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Cloud Platforms Operated</div>
+                 </div>
+                 <div className="p-6 bg-surface rounded-2xl border border-border/50 shadow-sm hover:border-accent/30 transition-colors">
+                     <div className="text-4xl font-bold text-accent mb-1">0</div>
+                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Black Friday Incidents</div>
                  </div>
             </motion.div>
          </div>
 
-         {/* Marquee / Skills */}
+         {/* Skills */}
          <div className="mt-20">
-            <h3 className="text-sm font-semibold text-muted uppercase tracking-wider mb-6">Technologies I work with</h3>
+            <h3 className="text-sm font-semibold text-muted uppercase tracking-wider mb-6">Core Technologies</h3>
             <div className="flex flex-wrap gap-3">
                {skills.map((skill, index) => (
                   <motion.span

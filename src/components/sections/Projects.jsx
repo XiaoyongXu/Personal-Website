@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import projectsData from "../../data/projects.json";
 
 // We'll map the stacked (array) to tags in our card
@@ -34,13 +34,15 @@ export const ProjectCard = ({ project, index }) => {
            </div>
            <div className="flex gap-2">
               {project.github && (
-                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 text-muted hover:text-text hover:bg-muted/10 rounded-full transition-colors" aria-label="Github">
-                    <FiGithub size={20} />
+                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-muted bg-surface border border-border rounded-lg hover:text-accent hover:border-accent/50 transition-colors" aria-label="Github">
+                    <FiGithub size={16} />
+                    <span>Code</span>
                  </a>
               )}
                {project.link && (
-                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 text-muted hover:text-text hover:bg-muted/10 rounded-full transition-colors" aria-label="Demo">
-                    <FiArrowUpRight size={20} />
+                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-accent bg-accent/10 border border-accent/30 rounded-lg hover:bg-accent/20 transition-colors" aria-label="Live Site">
+                    <FiExternalLink size={16} />
+                    <span>Live</span>
                  </a>
               )}
            </div>
@@ -52,16 +54,11 @@ export const ProjectCard = ({ project, index }) => {
         </p>
         
         <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-border/50">
-          {project.tags.slice(0, 5).map(tag => (
+          {project.tags.map(tag => (
             <span key={tag} className="px-2.5 py-1 text-xs font-medium rounded-md bg-muted/10 text-muted-foreground border border-border/50">
               {tag}
             </span>
           ))}
-          {project.tags.length > 5 && (
-             <span className="px-2.5 py-1 text-xs font-medium rounded-md bg-muted/10 text-muted-foreground border border-border/50">
-                +{project.tags.length - 5}
-             </span>
-          )}
         </div>
       </div>
     </motion.div>
@@ -75,12 +72,12 @@ export const Projects = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
            <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Featured Projects</h2>
-              <p className="text-muted text-lg">A selection of projects that showcase my technical breadth.</p>
+              <p className="text-muted text-lg">Production systems I've built and owned — backend, platform, and infrastructure.</p>
            </div>
            
            <a href="https://github.com/XiaoyongXu" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 text-accent font-medium hover:text-accent/80 transition-colors mt-4 md:mt-0 group">
               <span>View Github Profile</span>
-              <FiArrowUpRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <FiExternalLink className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
            </a>
         </div>
         
