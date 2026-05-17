@@ -53,7 +53,7 @@ export const Hero = () => {
           className="mb-6"
         >
           <span className="inline-block px-4 py-1.5 text-sm font-medium tracking-wide text-accent bg-accent/10 border border-accent/20 rounded-full">
-            Senior Software Engineer · Platform Engineer
+            Staff Software Engineer · Platform Engineer
           </span>
         </motion.div>
         
@@ -73,14 +73,14 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed font-light"
         >
-          I build and operate full-stack platform systems for high-volume logistics — serverless
-          microservices, Kubernetes workloads, cross-border shipping, payment orchestration,
-          and deployment infrastructure. Currently on the platform team at{" "}
+          I build backend platforms, release systems, and cloud infrastructure for high-volume
+          logistics — spanning serverless services, cross-border shipping, deployment automation,
+          and production reliability. Currently at{" "}
           <span className="text-text font-medium relative inline-block">
              UniUni
              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent/50 rounded-full"></span>
           </span>
-          , owning systems that power shipping, payments, and integrations across Canada and the U.S.
+          , working across URP backend systems, blue-green releases, and uniuni.com web tracking infrastructure.
         </motion.p>
 
         <motion.div

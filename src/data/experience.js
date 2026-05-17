@@ -5,42 +5,46 @@ export const experience = [
     range: "2025 — Present",
     themes: [
       {
-        label: "Platform Architecture",
+        label: "Uni Retail Platform (URP)",
         bullets: [
-          "Own and scale the Uni Retail Platform (URP) — a serverless backend on AWS Lambda with 28+ services spanning shipments, payments, carrier integrations, and analytics.",
-          "Drive API contract design with Prisma, Zod, and TypeScript, enforcing schema validation and safe evolution across services.",
+          "Built and scaled backend services for URP across shipments, payments, carrier integrations, merchant webhooks, campaign automation, cross-border shipping, and analytics.",
+          "Delivered merchant-facing APIs with AWS Lambda, TypeScript, Prisma, and Zod, improving validation, API contract clarity, and service evolution across platform boundaries.",
         ],
       },
       {
         label: "Cross-Border & Logistics",
         bullets: [
-          "Built HTS-based duty and tariff automation via Borderline Genius API, enabling real-time cost transparency for CA-to-US cross-border shipments with PostNL and Wizmo.",
-          "Designed pickup serviceability filtering and service-area logic across U.S. and Canadian regions to support the U.S. soft launch.",
+          "Supported the U.S. cross-border soft launch with HTS-based duty automation, tariff transparency, and pickup/serviceability logic across U.S. and Canada shipment flows.",
+          "Helped enable Delivered Duty Paid shipping so merchants and buyers could see landed costs upfront before cross-border delivery.",
         ],
       },
       {
-        label: "Event-Driven & Payment Systems",
+        label: "Campaigns, Webhooks & Analytics",
         bullets: [
-          "Architected a marketing campaign MVP with payment-method-triggered events and webhook-driven backend flows for merchant-facing features.",
-          "Built a merchant self-service webhook platform, migrating from AWS Secrets Manager fallback logic to a DB-driven architecture with improved auth validation and HTTPS enforcement.",
-        ],
-      },
-      {
-        label: "Analytics & Internal Platforms",
-        bullets: [
-          "Debugged and corrected KPI accuracy issues across analytics pipelines. Migrated Retool-dependent workflows into the main web app to reduce tooling fragmentation.",
+          "Contributed to the marketing campaign MVP with backend business logic, event-driven payment-method triggers, referral workflows, and campaign automation foundations.",
+          "Built merchant-facing webhook self-service flows and migrated configuration away from AWS Secrets Manager fallback logic toward a DB-driven model with stronger auth validation and HTTPS enforcement.",
+          "Improved analytics and internal operations tooling by resolving KPI discrepancies end to end, expanding reporting APIs, and reducing reliance on manual Retool workflows.",
         ],
       },
       {
         label: "Deployment & Reliability",
         bullets: [
-          "Operate regional deployments and blue-green-style releases via shell-script-based workflows. Own production debugging, incident support, and infrastructure SOPs.",
+          "Supported production and standby deployments across U.S. and Canada environments using internal shell-script-based blue-green release workflows.",
+          "Debugged release failures involving ECR authentication, Docker multi-arch manifests, ASG standby scale-up, release-comment automation, tag parsing, and environment-specific config paths.",
+          "Created and hardened deployment SOPs, service mapping references, release-comment tooling, standby scale-up workflows, and operational runbooks to reduce release risk and tribal knowledge.",
+        ],
+      },
+      {
+        label: "uniuni.com & Web Tracking Infrastructure",
+        bullets: [
+          "Reviewed the infrastructure separation of public shipment tracking traffic from the WordPress-based uniuni.com site toward a dedicated tracking.uniuni.com platform.",
+          "Validated EKS, ALB, CloudFront, Route 53, IAM, CloudWatch, Terraform/Terragrunt, DNS, ACM certificate, and Next.js static-routing risks before go-live.",
         ],
       },
       {
         label: "AI-Augmented Engineering",
         bullets: [
-          "Introduced Claude Code, Codex, and Gemini as practical engineering tools for planning, debugging, TDD, code review, and rapid prototyping — adopted across the team as standard workflow.",
+          "Use Claude Code, Codex, and Gemini as practical engineering tools for planning, debugging, code review, documentation, and rapid prototyping.",
         ],
       },
     ],

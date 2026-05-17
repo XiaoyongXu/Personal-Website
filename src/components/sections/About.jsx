@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "TypeScript", "Node.js", "AWS Lambda", "Prisma", "PostgreSQL",
-  "Kafka", "Docker", "Kubernetes", "GCP", "MongoDB",
-  "Redis", "CI/CD", "Serverless", "Zod", "React",
-  "Terraform", "GraphQL", "Claude Code", "Codex",
+  "AWS", "Terraform", "Amazon EKS", "Docker", "Amazon ECR",
+  "TypeScript", "Node.js", "AWS Lambda", "Prisma", "Zod",
+  "CloudFront", "Route 53", "CloudWatch", "CI/CD", "Bash",
+  "Kubernetes", "Kafka", "GCP", "React", "Claude Code", "Codex",
 ];
 
 export const About = () => {
@@ -24,13 +24,13 @@ export const About = () => {
                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">About Me</h2>
                <div className="space-y-4 text-muted text-lg leading-relaxed">
                   <p>
-                    I'm a software and platform engineer who builds systems that move real things — packages, payments, carrier integrations — across borders and at scale. My work spans the full stack, from React frontends to serverless microservices to Kubernetes infrastructure. My focus is on making complex logistics systems reliable, observable, and safe to change.
+                    I'm a staff software engineer and platform engineer who builds systems that move real things — packages, payments, carrier integrations — across borders and at scale. My work spans backend platforms, release workflows, cloud infrastructure, and production reliability.
                   </p>
                   <p>
-                    At <span className="text-accent font-medium">UniUni</span>, I own the platform powering cross-border shipping between Canada and the U.S., including duty automation, webhook systems, analytics pipelines, and regional deployment operations. Before that, I built inventory orchestration and event-driven systems for high-traffic e-commerce at <span className="text-accent font-medium">Orium</span>.
+                    At <span className="text-accent font-medium">UniUni</span>, I work across URP backend engineering and platform reliability: serverless AWS Lambda services, cross-border shipping automation, merchant webhooks, campaign systems, blue-green releases, Terraform/Terragrunt infrastructure review, and uniuni.com web tracking separation. Before that, I built inventory orchestration and event-driven systems for high-traffic e-commerce at <span className="text-accent font-medium">Orium</span>.
                   </p>
                   <p>
-                    I use AI tools — Claude Code, Codex, Gemini — as practical engineering leverage for planning, debugging, and accelerating delivery. Not as a novelty, but as part of how I ship.
+                    My strongest work sits where application architecture meets operations: designing reliable APIs, debugging cross-service failures, hardening deployment workflows, and turning fragile manual processes into repeatable engineering systems.
                   </p>
                </div>
             </motion.div>
@@ -48,12 +48,12 @@ export const About = () => {
                      <div className="text-sm text-muted font-medium uppercase tracking-wider">Years in Production Systems</div>
                  </div>
                  <div className="p-6 bg-surface rounded-2xl border border-border/50 shadow-sm hover:border-accent/30 transition-colors">
-                     <div className="text-4xl font-bold text-accent mb-1">3</div>
-                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Cloud Platforms Operated</div>
+                     <div className="text-4xl font-bold text-accent mb-1">2</div>
+                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Countries in Release Scope</div>
                  </div>
                  <div className="p-6 bg-surface rounded-2xl border border-border/50 shadow-sm hover:border-accent/30 transition-colors">
-                     <div className="text-4xl font-bold text-accent mb-1">0</div>
-                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Black Friday Incidents</div>
+                     <div className="text-4xl font-bold text-accent mb-1">3</div>
+                     <div className="text-sm text-muted font-medium uppercase tracking-wider">Cloud Platforms Operated</div>
                  </div>
             </motion.div>
          </div>

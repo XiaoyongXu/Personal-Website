@@ -1,33 +1,53 @@
 [
   {
     "title": "Uni Retail Platform (URP)",
-    "summary": "Lead architect for a high-scale logistics platform, driving the transition to a serverless 'Lambdalith' architecture with 28+ microservices for cross-border shipping operations.",
-    "details": "Architected a serverless microservices backend on AWS Lambda handling shipments, payments, and multi-carrier integrations. Integrated Borderline Genius API for real-time US duty and tariff calculations on HTS codes. Built Retool-based analytics dashboards and optimized pickup flows with serviceability filtering.",
+    "summary": "Merchant-facing logistics SaaS platform spanning shipments, payments, carrier integrations, webhooks, campaign automation, cross-border shipping, and analytics.",
+    "details": "Built backend services on AWS Lambda with TypeScript, Prisma, and Zod across URP domains. Supported the U.S. cross-border soft launch with HTS-based duty automation, tariff transparency, and pickup/serviceability logic; helped build the marketing campaign MVP with event-driven payment-method triggers and referral workflow foundations; and migrated merchant webhook configuration toward a DB-driven self-service model.",
     "stack": [
       "TypeScript",
       "Node.js",
       "AWS Lambda",
       "Prisma",
-      "PostgreSQL",
-      "Retool",
-      "PostNL",
-      "Wizmo"
+      "Zod",
+      "Webhooks",
+      "Event-Driven Architecture",
+      "Cross-Border Shipping"
     ],
     "github": "",
     "demo": "https://ship.uniuni.com/"
   },
   {
-    "title": "UniUni.com — Corporate Site",
-    "summary": "Own deployment and release operations for UniUni's public-facing WordPress site, managing infrastructure, updates, and production reliability.",
-    "details": "Manage deployment pipelines, WordPress updates, and production environment for the uniuni.com corporate site. Responsible for release coordination, uptime, and operational continuity.",
+    "title": "uniuni.com Infrastructure & Web Tracking Separation",
+    "summary": "Infrastructure separation project moving public shipment tracking traffic away from the WordPress-based uniuni.com site toward a dedicated tracking platform.",
+    "details": "Reviewed the proposed dedicated EKS, ALB, and CloudFront architecture for tracking.uniuni.com, validating routing strategy, IAM scope, Terraform/Terragrunt tfvars handling, CloudWatch notification gaps, DNS/certificate requirements, and production cutover risks. Coordinated readiness questions around English/French route coverage, Next.js static assets, ALB origin verification, and redirects from existing uniuni.com tracking paths.",
     "stack": [
-      "WordPress",
-      "PHP",
-      "Deployment",
-      "Infrastructure"
+      "AWS",
+      "Amazon EKS",
+      "CloudFront",
+      "ALB",
+      "Route 53",
+      "Terraform",
+      "Terragrunt",
+      "IAM"
     ],
     "github": "",
     "demo": "https://www.uniuni.com/"
+  },
+  {
+    "title": "Deployment & Reliability Automation",
+    "summary": "Production and standby release workflows for UniUni services across U.S. and Canada environments, focused on safer blue-green operations.",
+    "details": "Supported shell-script-based blue-green deployments and hardened operational workflows around standby scale-up, release comments, service mapping, and environment checks. Debugged ECR authentication, Docker multi-arch manifests, ASG scale-up, tag parsing, and config path issues while turning recurring deployment knowledge into repeatable runbooks.",
+    "stack": [
+      "AWS",
+      "Amazon ECR",
+      "Docker",
+      "Bash",
+      "CI/CD",
+      "Release Engineering",
+      "Incident Response"
+    ],
+    "github": "",
+    "demo": ""
   },
   {
     "title": "Tropical Daydream — E-Commerce Store",
