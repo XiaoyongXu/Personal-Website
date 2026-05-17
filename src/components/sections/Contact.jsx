@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Button } from "../ui/Button";
 
 export const Contact = () => {
   return (
@@ -26,9 +25,9 @@ export const Contact = () => {
            transition={{ duration: 0.5, delay: 0.1 }}
            className="flex flex-col sm:flex-row gap-5"
         >
-           <Button variant="accent" className="h-14 px-10 text-lg rounded-full shadow-xl shadow-accent/20 hover:shadow-accent/40" onClick={() => window.location.href = 'mailto:xxy1994212@gmail.com'}>
+           <a href="mailto:xxy1994212@gmail.com" className="btn btn-accent h-14 px-10 text-lg rounded-full shadow-xl shadow-accent/20 hover:shadow-accent/40 inline-flex items-center justify-center">
               Send me an email
-           </Button>
+           </a>
         </motion.div>
       </div>
     </section>
