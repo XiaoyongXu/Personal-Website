@@ -1,8 +1,43 @@
 export const experience = [
   {
-    role: "Senior Software Engineer & Platform Engineer",
+    role: "Staff Software Engineer / Platform Engineer",
     company: "UniUni (Uni Express Inc.)",
-    range: "2025 — Present",
+    range: "Apr 2026 — Present",
+    themes: [
+      {
+        label: "Deployment & Reliability Automation",
+        bullets: [
+          "Supported production and standby deployments across U.S. and Canada environments using internal shell-script-based blue-green release workflows.",
+          "Debugged release failures involving ECR authentication, Docker multi-arch manifests, ASG standby scale-up, release-comment automation, tag parsing, and environment-specific config paths.",
+          "Created and hardened deployment SOPs, service mapping references, release-comment tooling, standby scale-up workflows, and operational runbooks to reduce release risk and tribal knowledge.",
+        ],
+      },
+      {
+        label: "uniuni.com & Web Tracking Infrastructure",
+        bullets: [
+          "Reviewed the infrastructure separation of public shipment tracking traffic from the WordPress-based uniuni.com site toward a dedicated tracking.uniuni.com platform.",
+          "Validated EKS, ALB, CloudFront, Route 53, IAM, CloudWatch, Terraform/Terragrunt, DNS, ACM certificate, and Next.js static-routing risks before go-live.",
+        ],
+      },
+      {
+        label: "Production Operations",
+        bullets: [
+          "Investigated production infrastructure issues across EC2, Docker containers, RabbitMQ, DNS, SSL, ALB, CloudFront, EKS, IAM, SQS, and CloudWatch access patterns.",
+          "Coordinated deployment readiness and infrastructure handoffs across DevOps, application teams, vendors, and business stakeholders.",
+        ],
+      },
+      {
+        label: "AI-Augmented Engineering",
+        bullets: [
+          "Use Claude Code, Codex, and Gemini as practical engineering tools for planning, debugging, code review, documentation, and rapid prototyping.",
+        ],
+      },
+    ],
+  },
+  {
+    role: "Senior Software Developer",
+    company: "UniUni (Uni Express Inc.)",
+    range: "Dec 2025 — Apr 2026",
     themes: [
       {
         label: "Uni Retail Platform (URP)",
@@ -27,24 +62,9 @@ export const experience = [
         ],
       },
       {
-        label: "Deployment & Reliability",
+        label: "Production Debugging",
         bullets: [
-          "Supported production and standby deployments across U.S. and Canada environments using internal shell-script-based blue-green release workflows.",
-          "Debugged release failures involving ECR authentication, Docker multi-arch manifests, ASG standby scale-up, release-comment automation, tag parsing, and environment-specific config paths.",
-          "Created and hardened deployment SOPs, service mapping references, release-comment tooling, standby scale-up workflows, and operational runbooks to reduce release risk and tribal knowledge.",
-        ],
-      },
-      {
-        label: "uniuni.com & Web Tracking Infrastructure",
-        bullets: [
-          "Reviewed the infrastructure separation of public shipment tracking traffic from the WordPress-based uniuni.com site toward a dedicated tracking.uniuni.com platform.",
-          "Validated EKS, ALB, CloudFront, Route 53, IAM, CloudWatch, Terraform/Terragrunt, DNS, ACM certificate, and Next.js static-routing risks before go-live.",
-        ],
-      },
-      {
-        label: "AI-Augmented Engineering",
-        bullets: [
-          "Use Claude Code, Codex, and Gemini as practical engineering tools for planning, debugging, code review, documentation, and rapid prototyping.",
+          "Investigated and fixed production issues across Lambda, Prisma, ShipStation, webhook delivery flows, and analytics data paths.",
         ],
       },
     ],
