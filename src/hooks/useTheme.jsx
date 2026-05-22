@@ -11,7 +11,9 @@ export default function useTheme() {
       // legacy support for old values
       if (stored === 'dark') return 'midnight'
       if (stored === 'light') return 'minimal'
-    } catch (e) {}
+    } catch {
+      // Ignore unavailable localStorage.
+    }
     // default to system preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'midnight'
     return 'minimal'
@@ -20,7 +22,9 @@ export default function useTheme() {
   useEffect(() => {
     try {
       localStorage.setItem(THEME_KEY, theme)
-    } catch (e) {}
+    } catch {
+      // Ignore unavailable localStorage.
+    }
     const html = document.documentElement
     // remove any previous theme classes
     html.classList.remove('theme-midnight', 'theme-minimal', 'dark')

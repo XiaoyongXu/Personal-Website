@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import projectsData from "../../data/projects.json";
 

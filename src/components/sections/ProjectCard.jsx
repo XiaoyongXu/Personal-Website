@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiGithub } from "react-icons/fi";
-import { cn } from "../../lib/utils";
 
 export const ProjectCard = ({ project, index }) => {
   return (
